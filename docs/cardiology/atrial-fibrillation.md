@@ -1,5 +1,7 @@
 ---
 title: Atrial Fibrillation
+description: Most common sustained arrhythmia
+tags: [cardiology, arrhythmia, high-yield]
 ---
 
 # Atrial Fibrillation
