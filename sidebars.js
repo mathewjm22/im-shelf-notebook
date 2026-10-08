@@ -13,6 +13,7 @@ const sidebars = {
         'cardiology/valvular-disease',
         'cardiology/pericardial-disease',
         'cardiology/syncope',
+        'cardiology/murmurs',        
       ],
     },
     {
