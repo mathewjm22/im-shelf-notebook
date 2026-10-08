@@ -1,0 +1,150 @@
+# OpenEvidence Prompt Pack — Shelf Exam Content
+
+**Important:** OpenEvidence works best with focused clinical queries, not long content-generation requests. Instead of one mega-prompt, this is a **sequence of 5 focused prompts** you run back-to-back for each condition. Each prompt is scoped to what OpenEvidence does best (evidence synthesis with citations). You paste all 5 responses together into Claude at the end.
+
+Total time per condition: ~5 minutes in OpenEvidence, then paste to Claude.
+
+---
+
+## How to use
+
+1. Open OpenEvidence (grant it any search permissions it asks for)
+2. Replace `[CONDITION]` in each prompt with your topic (e.g., "Diabetic Ketoacidosis," "Community-Acquired Pneumonia")
+3. Run each prompt as a **separate query** in OpenEvidence (don't paste all 5 at once — OpenEvidence won't handle that well)
+4. Copy each response as it comes
+5. When you've run all 5, paste them to Claude with:
+   > "Create a new page for [CONDITION]. Here are the OpenEvidence responses: [paste all 5 clearly separated]"
+
+   Or, if you also have OneNote content:
+   > "Create a page for [CONDITION]. Here's OpenEvidence output: [paste 5 responses]. Here's my OneNote content: [paste or attach]. Merge both — prioritize my teaching voice but use OpenEvidence for evidence and current numbers."
+
+---
+
+## The 5 Prompts
+
+### Prompt 1 — Diagnosis & Pathophysiology
+
+```
+I'm teaching an internal medicine shelf exam review on [CONDITION]. Provide a focused summary with inline citations covering:
+
+1. Pathophysiology — the key mechanistic cascade a medical student must understand, in 1-2 paragraphs
+2. Diagnostic criteria — the formal criteria, scoring systems (if any), and specific numerical thresholds that establish the diagnosis
+3. Required workup — labs, imaging, and tests needed to confirm the diagnosis and rule out key mimics
+4. Common differential diagnoses that get mistaken for this condition on the shelf exam
+
+Use bullet points and tables where helpful. Cite guidelines and primary sources with year of publication.
+```
+
+### Prompt 2 — Clinical Presentation & Buzzwords
+
+```
+For [CONDITION] on the internal medicine shelf exam, provide:
+
+1. Classic clinical presentation (history, symptoms, physical exam findings) — including vital sign patterns and classic buzzword phrases that shelf question writers use
+2. Atypical presentations worth knowing (e.g., silent presentations in diabetics or elderly, if applicable)
+3. Lab patterns that are pathognomonic or highly suggestive — give specific values when they matter
+4. Imaging findings with buzzword descriptions (e.g., "ground-glass opacities," "pulsus parvus et tardus")
+5. Demographic clues (age, sex, risk factors) that point toward this diagnosis in a vignette
+
+Format as a clear list that a student can scan quickly. Cite sources where specific numbers or findings come from a guideline or primary study.
+```
+
+### Prompt 3 — Management (Acute & Chronic)
+
+```
+For [CONDITION] on the internal medicine shelf, give me the management approach with inline citations:
+
+1. First-line acute/initial management — specific drugs, doses when they matter, fluid choices, order of operations
+2. Common wrong-answer traps on shelf exam management questions (e.g., "giving insulin before fluids in DKA") — explain WHY the trap works and what the correct reasoning is
+3. Chronic/outpatient management — long-term treatment, prevention of recurrence, discharge criteria
+4. Special populations (pregnancy, elderly, renal/hepatic dysfunction, immunocompromised) — only if there are meaningful differences
+5. When to escalate (ICU admission criteria, surgical referral, specialist consult)
+
+Cite current guidelines (year specified) for key recommendations.
+```
+
+### Prompt 4 — Key Trials & Evidence
+
+```
+Summarize the 3-5 most important landmark trials, major guidelines, or evidence sources relevant to [CONDITION] for an internal medicine learner. For each, give:
+
+- Trial name or guideline name + year
+- One-sentence summary of what it established
+- Why it matters clinically / what practice it changed
+
+Keep it concise — these are the evidence anchors a student should be able to name on rounds, not a full literature review.
+```
+
+### Prompt 5 — High-Yield Shelf Points
+
+```
+Give me the 10 highest-yield facts about [CONDITION] that the NBME internal medicine shelf exam reliably tests. These should be the "if a student only has 15 minutes to study this topic, learn these" points. Be specific — not "know the management" but "know that bicarbonate is NOT routinely given in DKA unless pH < 6.9."
+
+Also give me 5 classic buzzword/finding → diagnosis associations for this condition. Format as:
+- "Finding/phrase → what it suggests"
+
+Cite guidelines where the recommendation comes from a specific source.
+```
+
+---
+
+## Why 5 prompts, not 1
+
+Research on OpenEvidence shows it was designed for **focused point-of-care questions** — the sweet spot is specific clinical queries that get synthesized evidence back with citations. Giving it a 500-word mega-prompt with 13 required sub-sections tends to produce:
+- Shorter, more generic answers per section
+- Lost citations
+- Sections that get dropped or merged
+
+Breaking into 5 focused prompts means each query gets OpenEvidence's full attention and best citation output. Yes, it's a few more clicks — but the output quality is much higher.
+
+---
+
+## If you want to be lazy
+
+For a quick single-prompt alternative that will produce something usable (just less rich), use this:
+
+```
+I'm teaching an internal medicine shelf exam review on [CONDITION]. Produce a comprehensive teaching summary with inline citations covering: pathophysiology, diagnostic criteria with specific thresholds, classic clinical presentation and buzzwords, first-line acute management with specific drugs and doses, chronic management, and the 10 highest-yield points the NBME shelf exam tests on this topic. Flag common wrong-answer traps and explain why they're wrong. Cite current guidelines by year.
+```
+
+Expect a shorter, less detailed response — but it's still a good scaffold. Paste it to Claude the same way.
+
+---
+
+## Pro tips
+
+**Use medical abbreviations and specifics.** Per OpenEvidence's own guide, "In a patient with T1DM, with the following labs: pH 7.15..." produces better output than "Tell me about DKA." The 5-prompt format already builds this in, but if you want to go deeper on any single aspect, add specifics.
+
+**Follow-up prompts are free.** If a section is weak, run a follow-up: "Expand on management of [CONDITION] in pregnancy with specific drug choices and safety data." OpenEvidence maintains context within a session.
+
+**Save high-performing prompts.** OpenEvidence has a "slash prompt" feature (type `.` in the ask bar) to save and reuse custom prompts. You could save each of the 5 above as `.shelf1`, `.shelf2`, etc. and run them with one keystroke.
+
+**Trust but verify specific numbers.** OpenEvidence has very low citation fabrication rates (per a 2026 study auditing ~5,000 citations, essentially none were fabricated) — but drug doses, criteria thresholds, and guideline-year specifics are still worth double-checking against UpToDate or the guideline itself before putting them in front of students.
+
+---
+
+## What to send to Claude
+
+When you've run all 5 prompts, send a message structured like this:
+
+```
+Create a new page for [CONDITION]. Here are the 5 OpenEvidence responses:
+
+=== PROMPT 1 OUTPUT (Diagnosis & Pathophysiology) ===
+[paste]
+
+=== PROMPT 2 OUTPUT (Clinical Presentation & Buzzwords) ===
+[paste]
+
+=== PROMPT 3 OUTPUT (Management) ===
+[paste]
+
+=== PROMPT 4 OUTPUT (Key Trials & Evidence) ===
+[paste]
+
+=== PROMPT 5 OUTPUT (High-Yield Shelf Points) ===
+[paste]
+```
+
+Claude will restructure into your Docusaurus template, preserve all content, maintain citations, and produce a drop-in page.
+```
