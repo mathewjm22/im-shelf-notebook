@@ -1,6 +1,6 @@
 const sidebars = {
   mainSidebar: [
-    'intro',
+    'index',
     {
       type: 'category',
       label: '❤️ Cardiology',
