@@ -103,14 +103,14 @@ const sidebars = {
         'rheum/seronegative-spondyloarthropathies',
       ],
     },
-    {
+{
       type: 'category',
       label: '🧠 Neurology',
       items: [
-        'neuro/stroke',
-        'neuro/seizures',
-        'neuro/headache',
-        'neuro/dementia-delirium',
+        'neurology/stroke',
+        'neurology/seizures',
+        'neurology/headache',
+        'neurology/dementia-delirium',
       ],
     },
     {
