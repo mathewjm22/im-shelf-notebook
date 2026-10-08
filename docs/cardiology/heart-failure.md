@@ -1,8 +1,10 @@
 ---
-title: heart-failure
+title: Heart Failure
+description: HFrEF and HFpEF — diagnosis and guideline-directed therapy
+tags: [cardiology, heart-failure, high-yield]
 ---
 
-# heart-failure
+# Heart Failure
 
 :::note Content coming soon
 This page is a stub. Content is being added.
