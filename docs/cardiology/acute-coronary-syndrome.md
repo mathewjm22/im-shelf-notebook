@@ -1,8 +1,10 @@
 ---
-title: acute-coronary-syndrome
+title: Acute Coronary Syndrome
+description: STEMI, NSTEMI, and unstable angina
+tags: [cardiology, acs, high-yield]
 ---
 
-# acute-coronary-syndrome
+# Acute Coronary Syndrome
 
 :::note Content coming soon
 This page is a stub. Content is being added.
