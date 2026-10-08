@@ -6,7 +6,7 @@ const config = {
   favicon: 'img/favicon.ico',
   url: 'https://im-shelf-notebook.pages.dev',
   baseUrl: '/',
-  organizationName: 'your-github-username',
+  organizationName: 'mathewjm22',
   projectName: 'im-shelf-notebook',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -18,7 +18,7 @@ const config = {
       docs: {
         sidebarPath: './sidebars.js',
         routeBasePath: '/',
-        editUrl: 'https://github.com/your-github-username/im-shelf-notebook/edit/main/',
+        editUrl: 'https://github.com/mathewjm22/im-shelf-notebook/edit/main/',
         showLastUpdateTime: true,
       },
       blog: false,
@@ -33,7 +33,7 @@ const config = {
       title: 'IM Shelf Notebook',
       items: [
         { type: 'docSidebar', sidebarId: 'mainSidebar', position: 'left', label: 'Notebook' },
-        { href: 'https://github.com/your-github-username/im-shelf-notebook', label: 'GitHub', position: 'right' },
+        { href: 'https://github.com/mathewjm22/im-shelf-notebook', label: 'GitHub', position: 'right' },
       ],
     },
     footer: {
