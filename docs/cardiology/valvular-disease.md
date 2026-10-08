@@ -1,8 +1,8 @@
 ---
-title: Atrial Fibrillation
+title: Valvular Disease
 ---
 
-# Atrial Fibrillation
+# Valvular Disease
 
 :::note Content coming soon
 This page is a stub. Content is being added.

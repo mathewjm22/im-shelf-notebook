@@ -1,8 +1,8 @@
 ---
-title: Atrial Fibrillation
+title: Syncope
 ---
 
-# Atrial Fibrillation
+# Syncope
 
 :::note Content coming soon
 This page is a stub. Content is being added.
