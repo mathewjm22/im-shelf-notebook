@@ -1,0 +1,62 @@
+/* Clean, academic feel - not Blackboard */
+:root {
+  --ifm-color-primary: #0d9488;
+  --ifm-color-primary-dark: #0b7f74;
+  --ifm-color-primary-darker: #0a7169;
+  --ifm-color-primary-darkest: #085c56;
+  --ifm-color-primary-light: #10b0a1;
+  --ifm-color-primary-lighter: #15bdae;
+  --ifm-color-primary-lightest: #28d1c1;
+  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --ifm-heading-font-family: var(--ifm-font-family-base);
+  --ifm-font-size-base: 16px;
+  --ifm-line-height-base: 1.65;
+  --ifm-h1-font-size: 2.25rem;
+  --ifm-h2-font-size: 1.6rem;
+  --ifm-h3-font-size: 1.25rem;
+  --ifm-code-font-size: 90%;
+  --ifm-container-width-xl: 1400px;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #2dd4bf;
+  --ifm-color-primary-dark: #14b8a6;
+  --ifm-color-primary-darker: #0d9488;
+  --ifm-color-primary-darkest: #0f766e;
+  --ifm-color-primary-light: #5eead4;
+  --ifm-color-primary-lighter: #99f6e4;
+  --ifm-color-primary-lightest: #ccfbf1;
+  --ifm-background-color: #0f172a;
+}
+
+/* Nicer admonitions/callouts */
+.alert {
+  border-radius: 8px;
+  border-left-width: 4px;
+}
+
+/* Tighter sidebar */
+.menu__link {
+  font-size: 0.9rem;
+  padding: 0.4rem 0.75rem;
+}
+
+/* Breathing room on headers */
+.markdown h2 {
+  margin-top: 2.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* Shelf-tip custom callout styling */
+.shelf-tip {
+  background: linear-gradient(to right, #ecfeff, #f0fdfa);
+  border-left: 4px solid #0d9488;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+[data-theme='dark'] .shelf-tip {
+  background: linear-gradient(to right, #042f2e, #083344);
+}
